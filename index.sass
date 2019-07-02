@@ -544,3 +544,345 @@ html, body
 				.link
 					color: $mauchuheaderdam
 					font-weight: 500
+	
+	.modal_popup
+		width: 100%
+		height: 100%
+		position: fixed
+		top: 0
+		left: 0
+		z-index: 100
+		background-color: #00000073
+		.close_modal
+			position: absolute
+			top: -10px
+			right: 35px
+			color: $mauchubanner
+			cursor: pointer
+			font-size: $co6
+			display: inline-block
+			z-index: 111
+		.modal
+			display: block
+			width: 90%
+			height: 93%
+			background-color: $mauchubanner
+			margin: 20px auto
+			left: 50%
+			transform: translateX(-50%)
+			border-radius: 15px 0 0 15px
+			overflow: scroll
+			overflow-x: hidden
+			&::-webkit-scrollbar
+				width: 5px
+			&::-webkit-scrollbar-track
+				box-shadow: inset 0 0 5px #fff
+			&::-webkit-scrollbar-thumb
+				background-color: #17b154
+			&::-webkit-scrollbar-thumb:hover
+				background-color: seagreen
+			.silde_popup
+				background-color: #000
+				padding-top: 35px
+				.carousel
+					background-color: #000
+					ol
+						position: relative
+						height: 83px
+						width: 258px
+						margin: 0 auto
+						padding: 16px 0
+						a.carousel-control-prev.dottrai
+							left: -50px
+							z-index: 100
+							top: 50%
+							transform: translateY(-50%)
+						a.carousel-control-next.dotphai
+							top: 50%
+							transform: translateY(-50%)
+							right: -50px
+							z-index: 110
+						li.active
+							img
+								border: solid 1px $mauchubanner
+								transform: scale(1.2)
+								transition: .4s ease-in-out
+						li
+							text-indent: 0
+							background-color: transparent
+							height: 40px
+							width: 40px
+							margin: 0 5px
+							border: 0
+							img
+								width: 100%
+								height: 40px
+								object-position: top
+								object-fit: cover
+					img
+						object-fit: contain
+						object-position: top
+						height: 515px
+					a.dot
+						height: 40px
+						position: absolute
+						right: 0
+						top: 50%
+						transform: translateY(-50%)
+						span
+							display: block
+							width: 40px
+							height: 40px
+			.detail_post
+				padding: 25px 30px
+				padding-left: 40px
+				h2.title
+					font-weight: 700
+				h6
+					color: $mauchuvua
+					font-size: $co3
+				.author
+					display: flex
+					.thum_avatar
+						display: flex
+						img
+							width: 40px
+							height: 40px
+						span
+							display: block
+							font-size: 12px
+							font-weight: bold
+							color: $mauchuvua
+						span.name
+							font-size: $co4
+							color: $mauchuheaderdam
+							transition: .3s linear
+							&:hover
+								color: $mausdt
+					.nutbtn
+						@include nutbtn()
+						height: 42px
+						line-height: 42px
+						@include login()
+						position: relative
+						z-index: 10
+						&:nth-child(2)
+							margin-left: 40px
+						&:after
+							@include btnHover()
+						&:hover
+							color: $mauchubanner
+							&:after
+								visibility: visible
+								opacity: 1
+								z-index: -1
+						span
+							padding: 0 20px
+							transition: 0.3s linear
+							i
+								padding-right: 10px
+				.mota
+					font-weight: 500
+					font-size: $co3
+					color: $mauchuheaderdam
+					padding: 5px 0 20px
+				.comment
+					padding: 25px 0
+					max-height: 250px
+					border-bottom: 1px solid $mauvien
+					border-top: 1px solid $mauvien
+					position: relative
+					overflow-y: scroll
+					overflow-x: hidden
+					li
+						margin-bottom: 20px
+						.author
+							font-size: $co2
+							flex-direction: column
+							img
+								width: 30px
+								height: 30px
+								border-radius: 30px
+								display: block
+							h5.name
+								font-size: $co3
+							time
+								font-weight: 500
+								color: $mauchuvua
+						.content_comment
+							p
+								font-size: $co3
+				.inbox_comment
+					label
+						padding: 20px 0 10px
+						color: $mauchuheaderdam
+						font-weight: bold
+						font-size: $co4
+					textarea
+						background-color: $bgbutton
+					input
+						@include nutbtn()
+						width: 150px
+						height: 42px
+						line-height: 42px
+						margin-left: 0
+						padding: 0
+						outline: none
+						border: transparent
+						@include login()
+						position: relative
+						z-index: 10
+						transition: .4s ease-in-out
+						&:hover
+							color: $mauchubanner
+							background-image: $bgdangky
+							border: none
+				.statistical
+					.item
+						display: flex
+						justify-content:  space-between
+						padding: 20px 0
+						color: $mauchuvua
+						border-bottom: 1px solid $mauvien
+						font-weight: 500
+						font-size: $co3
+						&:last-child
+							border: none
+						p
+							margin: 0
+							i
+								margin-right: 10px
+								font-size: $co4
+						.tol
+							font-size: $co4
+						a.link
+							display: flex
+							justify-content: space-between
+							width: 100%
+							color: $mauchuvua
+							&:hover
+								i
+									color: $mausdt
+									transition: .4s ease-in-out
+				.social
+					padding-bottom: 20px
+					border-bottom: 1px solid  $mauvien
+					.link
+						border-radius: 5px
+						border: solid 2px $mauchuvua
+						margin-right: 20px
+						display: inline-block
+						text-align: center
+						background-origin: border-box
+						background-clip: content-box, border-box
+						i
+							font-size: 22px
+							padding: 7px
+							color: $mauchuvua
+							transition: .3s ease-in-out
+						&:hover
+							@include login()
+							transition: .4s ease-in-out
+							i 
+								color: $mausdt
+				.tags
+					padding: 20px 0 10px
+					h4
+						font-size: $co4
+					.list_tags
+						display: flex
+						.link
+							border: 1px solid $mauvien
+							color: $mauchuvua
+							font-weight: bold
+							border-radius: 4px
+							background-origin: border-box
+							background-clip: content-box, border-box
+							&:hover
+								@include login()
+								color: $mausdt
+								border: 1px solid transparent
+							span
+								padding: 7px 10px
+								display: inline-block
+				.album_another
+					padding: 20px 0 10px
+					h4
+						font-size: $co4
+					.list_album
+						display: flex
+						flex-wrap: wrap
+						li
+							width: 50%
+							padding: 0 5px
+							margin-bottom: 20px
+							.link
+								img
+									width: 100%
+									height: 100%
+	.modal_fade
+		width: 100%
+		height: 100%
+		background: #00000073
+		position: fixed
+		top: 0
+		left: 0
+		z-index: 100
+		.modal
+			display: block
+			width: 70%
+			left: 50%
+			transform: translateX(-50%)
+			top: 7%
+			border-radius: 10px
+			.modal-header
+				border: none
+				padding: 30px 0 22px
+				h2
+					font-weight: bold
+					font-size: $co5
+			.header_content
+				display: flex
+				justify-content: space-between
+				padding: 0 55px
+				padding-bottom: 20px
+				position: relative
+				&:after
+					content: ''
+					position: absolute
+					bottom: 0
+					left: 0
+					width: 96%
+					margin-left: 2%
+					border-bottom: solid 1px $mauvien
+				h5
+					font-size: $co3
+					color: $mauchuvua
+					font-weight: bold
+					margin-bottom: 15px
+				.author
+					.thum_avatar
+						display: flex
+						img
+							width: 40px
+							height: 40px
+							border-radius: 50%
+							margin-right: 5px 
+						span
+							display: block
+							font-size: 12px
+							font-weight: bold
+							color: $mauchuvua
+						span.name
+							font-size: $co4
+							color: $mauchuheaderdam
+							transition: .3s linear
+							&:hover
+								color: $mausdt
+				.goichup
+					select
+						padding: 10px 13px
+				.phichup
+					span
+						font-size: $co3
+						font-weight: 500
