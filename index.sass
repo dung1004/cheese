@@ -424,3 +424,101 @@ html, body
 								&:last-child
 									@include login()
 	//---------------------- end .header--------------------------------------------
+	.main
+		background-color: $maunenmain
+		padding-bottom: 50px
+		.banner
+			.owl-item.active
+				opacity: 1
+			.owl-item
+				opacity: .5
+				transition: .5s ease-in-out
+				.item
+					position: relative
+					height: auto
+					.post
+						position: absolute
+						top: 0
+						left: 0
+						width: 100%
+						height: 100%
+						display: flex
+						align-items: flex-end
+						justify-content: space-around
+						background-color: #00000070
+						padding-bottom: 20px
+						.post-detail
+							h2.title
+								font-weight: 700
+								font-size: $co4
+								margin: 0 !important
+								color: $mauchubanner
+								transition: .3s ease-in-out
+								cursor: pointer
+								&:hover
+									color: $mausdt
+							h6.title-img
+								color: $mauchuvua
+								font-size: $co3
+								display: flex
+								align-items: flex-end
+								&:before
+									content: ""
+									display: block
+									width: 30px
+									height: 2px
+									background-color: #b2b2b2
+									margin: 0 3px
+						.tuongtac
+							display: flex
+							.item
+								margin-left: 10px
+								&:first-child
+									margin-left: 0
+							span
+								color: $mauchuvua
+								font-size: $co2
+						.author
+							.thum_avatar
+								display: flex
+								img
+									width: 30px
+									height: 30px
+									border-radius: 50%
+								span
+									display: block
+									font-size: 11px
+									font-weight: bold
+									color: $mauchuvua
+								span.name
+									font-size: $co3
+									color: $mauchubanner
+									transition: .3s linear
+									width: 150px
+									white-space: nowrap
+									overflow: hidden
+									text-overflow: ellipsis
+									&:hover
+										color: $mausdt
+
+		.list_sp
+			.top_trang_diem
+				img.detail_popup
+					height: 165px
+					object-fit: cover
+					object-position: top
+			#tatca
+				img.detail_popup
+					height: 460px
+					object-fit: cover
+					object-position: top
+			#vay_cuoi
+				img.detail_popup
+					height: 460px
+					object-fit: cover
+					object-position: top
+			#ao_dai
+				img.detail_popup
+					height: 460px
+					object-fit: cover
+					object-position: top

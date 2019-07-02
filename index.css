@@ -475,5 +475,116 @@ html, body {
   color: #d71b96;
   transition: 0.3s ease-in-out;
 }
+.wrapper .main {
+  background-color: #f7f7f7;
+  padding-bottom: 50px;
+}
+.wrapper .main .banner .owl-item.active {
+  opacity: 1;
+}
+.wrapper .main .banner .owl-item {
+  opacity: 0.5;
+  transition: 0.5s ease-in-out;
+}
+.wrapper .main .banner .owl-item .item {
+  position: relative;
+  height: auto;
+}
+.wrapper .main .banner .owl-item .item .post {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  background-color: #00000070;
+  padding-bottom: 20px;
+}
+.wrapper .main .banner .owl-item .item .post .post-detail h2.title {
+  font-weight: 700;
+  font-size: 18px;
+  margin: 0 !important;
+  color: #ffffff;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+.wrapper .main .banner .owl-item .item .post .post-detail h2.title:hover {
+  color: #d71b96;
+}
+.wrapper .main .banner .owl-item .item .post .post-detail h6.title-img {
+  color: #b2b2b2;
+  font-size: 14px;
+  display: flex;
+  align-items: flex-end;
+}
+.wrapper .main .banner .owl-item .item .post .post-detail h6.title-img:before {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 2px;
+  background-color: #b2b2b2;
+  margin: 0 3px;
+}
+.wrapper .main .banner .owl-item .item .post .tuongtac {
+  display: flex;
+}
+.wrapper .main .banner .owl-item .item .post .tuongtac .item {
+  margin-left: 10px;
+}
+.wrapper .main .banner .owl-item .item .post .tuongtac .item:first-child {
+  margin-left: 0;
+}
+.wrapper .main .banner .owl-item .item .post .tuongtac span {
+  color: #b2b2b2;
+  font-size: 12px;
+}
+.wrapper .main .banner .owl-item .item .post .author .thum_avatar {
+  display: flex;
+}
+.wrapper .main .banner .owl-item .item .post .author .thum_avatar img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.wrapper .main .banner .owl-item .item .post .author .thum_avatar span {
+  display: block;
+  font-size: 11px;
+  font-weight: bold;
+  color: #b2b2b2;
+}
+.wrapper .main .banner .owl-item .item .post .author .thum_avatar span.name {
+  font-size: 14px;
+  color: #ffffff;
+  transition: 0.3s linear;
+  width: 150px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.wrapper .main .banner .owl-item .item .post .author .thum_avatar span.name:hover {
+  color: #d71b96;
+}
+.wrapper .main .list_sp .top_trang_diem img.detail_popup {
+  height: 165px;
+  object-fit: cover;
+  object-position: top;
+}
+.wrapper .main .list_sp #tatca img.detail_popup {
+  height: 460px;
+  object-fit: cover;
+  object-position: top;
+}
+.wrapper .main .list_sp #vay_cuoi img.detail_popup {
+  height: 460px;
+  object-fit: cover;
+  object-position: top;
+}
+.wrapper .main .list_sp #ao_dai img.detail_popup {
+  height: 460px;
+  object-fit: cover;
+  object-position: top;
+}
 
 /*# sourceMappingURL=index.css.map */
