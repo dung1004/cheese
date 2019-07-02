@@ -1,0 +1,426 @@
+// mau chữ
+$mausdt: #d71b96
+$mauchuheadernhat: #e5e5e5
+$mauchuvua: #b2b2b2
+$mauchuheaderdam: #4d4d4d
+$mauchuxam: #808080
+$mauchubanner: #ffffff
+$mautitle: #1a1a1a
+$mauxemthem: #d71b96
+$maunenmain: #f7f7f7
+// màu background
+$bgdangky: linear-gradient(87deg, #eb008b, #652d90)
+$bgbutton: #f2f2f2
+// màu viền
+$mauviennhat: #e6e6e6
+$mauvien: #e6e6e6
+$mauviencard: #f2f2f2
+// co chu
+$co1: 10px
+$co2: 12px
+$co3: 14px
+$co4: 18px
+$co5: 30px 
+$co6: 38px
+
+// width - height
+$height_header_top: 40px
+$height_top_body: 120px
+$width_logo: 150px
+$height_logo: 60px
+$button_login: 105px
+$button_tho_shop: 160px
+$height_button: 40px
+$width_form-tab: 968px
+$height_footer: 130px
+ 
+@mixin reset()
+	margin: 0
+	padding: 0
+	list-style: none
+@mixin flex()
+	display: flex
+	justify-content: space-between
+	flex-wrap: wrap
+	align-items: center
+@mixin login()
+	border: solid 2px transparent
+	background-image: linear-gradient(#ffffff, #ffffff), linear-gradient(81deg, #eb008b, #652d90)
+	color: $mausdt
+	transition: .3s ease-in-out
+@mixin next()
+	background-image: $bgdangky
+	color: $mauchubanner
+	font-weight: 700
+	display: inline-block
+	width: 160px
+	height: 45px
+	line-height: 45px
+	text-align: center
+	border-radius: 4px
+	font-size: $co4
+	float: right
+	margin-top: -53px
+@mixin nutbtn()
+	font-weight: 500
+	margin-left: 12px
+	border-radius: 4px
+	background-origin: border-box
+	background-clip: content-box, border-box
+	transition: 0.3s linear
+	display: inline-block
+	text-align: center
+@mixin btnHover()
+	content: ""
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	width: 100%
+	height: 100%
+	background-image: $bgdangky
+	z-index: 1
+	visibility: hidden
+	opacity: 0
+	transition: 0.3s linear
+
+// css chung
+p 
+	margin: 0
+a:hover
+	text-decoration: none
+a
+	color: $mauchuheaderdam
+	font-size: $co3
+ul
+	padding: 0
+	margin: 0
+	list-style: none
+h2.title
+	display: block
+	font-size: $co5
+	font-weight: 700
+	text-align: center
+	margin: 40px 0
+
+// css card 1 phần tử (sản phẩm)
+.card
+	border-color: $mauviencard
+	margin-bottom: 30px
+	.outhor
+		display: flex
+		justify-content: space-between
+		padding: 10px 15px 0
+		.info
+			display: flex
+			align-items: flex-start
+			img
+				width: 26px
+				height: 26px
+				border-radius: 50%
+				margin: 5px 2px 0 0
+			p
+				display: flex
+				flex-direction: column
+				font-size: $co2
+				margin-bottom: 7px
+				span.title
+					color: $mauchuheaderdam
+					font-weight: bold
+					&:hover
+						color: $mausdt
+				span.city
+					color: $mauchuxam
+		.booking_book
+			color: $mauchuxam
+			font-size: $co2
+			font-weight: 700
+			margin-top: 8px
+			&:hover
+				color: $mausdt
+	img.img-fluid
+		cursor: pointer
+	.card-block
+		padding: 15px 10px
+		.title-img
+			color: $mauchuvua
+			font-size: $co2
+			font-weight: 700
+			align-items: flex-end
+			display: flex
+			&:before
+				content: ""
+				display: block
+				width: 30px
+				height: 2px
+				background: $mauchuvua
+				margin: 0 3px
+		.card-title
+			font-size: $co3
+			color: $mauchuheaderdam
+			font-weight: 900
+			cursor: pointer
+			white-space: nowrap
+			width: 100%
+			overflow: hidden
+			text-overflow: ellipsis
+			transition: .3s ease-in-out
+			&:hover
+				color: $mausdt
+		.tuongtac
+			@include flex()
+			color: $mauchuvua
+			font-size: $co2
+			justify-content: flex-start
+			.item
+				margin-right: 15px
+				&:last-child
+					margin-right: 0
+		.price
+			position: absolute
+			right: 10px
+			background-image: $bgdangky
+			color: $mauchubanner
+			font-size: 12px
+			padding: 3px 5px
+			font-weight: bold
+			border-radius: 4px
+			margin-top: -20px
+			cursor: pointer
+			transition: .3s ease-in-out
+			z-index: 100
+			.list-group
+				position: absolute
+				color: $mauchuheaderdam
+				width: 300%
+				text-align: center
+				bottom: 100%
+				right: -110%
+				box-shadow: 8px 8px 24px 0 #00000066
+				border-radius: 4px
+				opacity: 0
+				visibility: hidden
+				transition: .3s ease-in-out
+				&:after
+					content: ""
+					width: 15px
+					height: 15px
+					background: $mauchubanner
+					transform: rotate(45deg)
+					display: inline-block
+					position: absolute
+					left: 40%
+					bottom: -8px
+				h5
+					font-size: $co2
+					margin-bottom: 4px
+				span
+					color: $mausdt
+					font-size: $co4
+					font-weight: 700
+				.list-group-item
+					border: none
+					border-bottom: 2px solid #ddd
+					&:last-child
+						border: none
+			&:hover
+				.list-group
+					visibility: visible
+					opacity: 1
+					bottom: 180%
+		.inbox
+			display: block
+			border-radius: 4px
+			text-align: center
+			margin-top: 20px
+			color: $mausdt
+			transition: .4s ease-in-out
+			font-weight: 700
+			background-clip: content-box, border-box
+			background-origin: border-box
+			@include login()
+			position: relative
+			span
+				z-index: 2
+				position: relative
+				padding: 5px 0
+				display: block
+			&:after
+				@include btnHover()
+			&:hover:after
+				opacity: 1
+				visibility: visible
+			&:hover
+				span
+					color: $mauchubanner
+// css show tab
+.list_sp
+	.tab_album
+		@include flex()
+		justify-content: center
+		margin: -20px 0 40px 0
+		.item
+			margin: 0 20px
+			.item_tab
+				color: $mauchuvua
+				font-weight: bold
+				border: 1px solid $mauvien
+				border-radius: 4px
+				background-origin: border-box
+				background-clip: content-box, border-box
+				display: inline-block
+				&.active
+					@include login()
+				span
+					padding: 6px 16px
+					display: inline-block
+	.show_tab
+		height: 0
+		display: none
+	@keyframes showtab
+		0%
+			top: 20px
+			opacity: 0
+		100% 
+			top: 0
+			opacity: 1
+	.show_tab.active
+		opacity: 1
+		z-index: 10
+		animation: showtab .7s ease-in-out
+		position: relative
+		height: auto
+		overflow-x: hidden
+		display: block
+// nút xem thêm
+.xemthem
+	a
+		display: inline-block
+		background-origin: border-box
+		background-clip: content-box, border-box
+		background-image: linear-gradient(#ffffff, #ffffff), linear-gradient(81deg, #eb008b, #652d90)
+		border: solid 2px transparent
+		border-radius: 5px
+		transition: .4s ease-in-out
+		position: relative
+		&:hover
+			background-image: $bgdangky
+			transition: .4s ease-in-out
+			span
+				color: $mauchubanner
+		span
+			display: inline-block
+			padding: 15px 35px
+			color: $mausdt
+			font-size: $co4
+			border-radius: 5px
+			font-weight: bold
+			transition: .4s ease-in-out
+.status
+	opacity: 0
+	visibility: hidden
+*
+	box-sizing: border-box
+html, body
+	width: 100%
+	height: 100%
+	font-family: "Quicksand", sans-serif
+	overflow-x: hidden
+.wrapper
+	.header
+		.container
+			.header_top
+				height: $height_header_top
+				border-bottom: 1px solid $mauviennhat
+				@include flex()
+				.hotline
+					@include reset()
+					color: $mauchuheaderdam
+					line-height: $height_header_top
+					font-size: $co3
+					.phone
+						color: $mausdt
+				.icon_search
+					@include flex()
+					text-align: center
+					a
+						background-color: $mauchuheadernhat
+						color: $mauchubanner
+						padding: 0px 4px
+						border-radius: 4px
+						margin-left: 30px
+						transition: .4s ease-in-out
+						&:hover
+							background-color: $mauchuvua
+				.helpkh
+					a
+						color: $mauchuvua
+						font-size: $co3
+						margin-left: 25px
+						font-weight: bold
+						transition: .4s ease-in-out
+						&:hover
+							color: $mausdt
+			// ------------------------------end .header_top-------------------------
+			.top_body
+				height: $height_top_body
+				@include flex()
+				.menu
+					@include flex()
+					.item-menu
+						margin: 0 16px
+						&:first-child
+							margin-left: 0
+						&:last-child
+							margin-right: 0
+						.link-item
+							transition: .4s ease-in-out
+							font-weight: 500
+							&:hover
+								color: $mausdt
+				.logo
+					a
+						width: $width_logo
+						height: $height_logo
+						display: inline-block
+						img
+							width: 100%
+							height: 100%
+				.login
+					.button
+						height: $height_button
+						line-height: $height_button
+						display: flex
+						flex-wrap: wrap
+						a
+							@include nutbtn()
+							&:first-child
+								margin-left: 0
+								width: $button_login
+								border: 2px solid transparent
+							&:hover
+								&:first-child
+									@include login()
+							&:nth-child(2)
+								position: relative
+								@include login()
+								width: $button_login
+								font-weight: bold
+								span
+									position: relative
+									z-index: 2
+							&:nth-child(2):after
+								@include btnHover()
+							&:hover
+								&:nth-child(2)
+									color: $mauchubanner
+								&:nth-child(2):after
+									visibility: visible
+									opacity: 1
+							&:last-child
+								border: 2px solid $mauvien
+								width: $button_tho_shop
+							&:hover
+								&:last-child
+									@include login()
+	//---------------------- end .header--------------------------------------------
