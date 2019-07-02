@@ -586,5 +586,28 @@ html, body {
   object-fit: cover;
   object-position: top;
 }
+.wrapper .footer {
+  height: 130px;
+  line-height: 130px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.wrapper .footer .logo img {
+  max-width: 120px;
+  opacity: 0.2;
+  filter: grayscale(1);
+}
+.wrapper .footer .contact {
+  display: flex;
+}
+.wrapper .footer .contact .item {
+  margin-right: 15px;
+}
+.wrapper .footer .contact .item .link {
+  color: #4d4d4d;
+  font-weight: 500;
+}
 
 /*# sourceMappingURL=index.css.map */
