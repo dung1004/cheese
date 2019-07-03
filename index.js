@@ -60,3 +60,7 @@ function close_modal(){
 		}
 }
 close_modal();
+
+
+
+console.log("con me may");
